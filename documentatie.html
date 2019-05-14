@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Documentatie</title>
+	<style>
+		:root {
+			background-color: #ececec;
+		}
+		body {
+			width: 8in;
+			margin-top: 0;
+			background-color: #fff;
+			margin: auto;
+			min-height: 100vh;
+			padding: 0.3in;
+		}
+		h1 {
+			margin-top: 0px;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Documentatie Biblioteca</h1>
+	<h2>Pinta Titus<h2>
+	
+	<h3>Cazuri de Utilizare</h3>
+	<img src="./UseCaseDiagram1.png" width="100%" />
+	Nume: Autentificare<br>
+	Actor: Abonat sau Bibliotecar<br>
+	Flux: 	1) Utilizatorul introduce datele si apasa butonul de autentificare<br>
+	2) Sistemul verifica datele<br>
+	3 a) In cazul in care datele sunt corecte redirectioneaza utilizatorul<br>
+	3 b) In caul in care sunt gresite sistemul anunta greseala<br>
+
+Nume: Inregistrare<br>
+	Actor: Abonat<br>
+	Flux: 	1) Utilizatorul introduce datele si apasa butonul de inregistrare<br>
+	2) Sistemul verifica datele<br>
+	3 a) In cazul in care datele sunt corecte redirectioneaza utilizatorul<br>
+	3 b) In caul in care sunt gresite sistemul anunta greseala<br>
+
+	Nume: Consultare carti<br>
+	Actor: Abonat<br>
+	Flux: 	1) Abonatul derileaza lista de carti<br>
+	Scenariu de Exceptie: -<br>
+	Preconditii: Autentificare<br>
+
+	Nume: Imprumuta Carte<br>
+	Actor: Abonat<br>
+	Flux: 	1) Utlizatorul alege cartea<br>
+	2) Utilizatorul apasa butonul de imprumut in cazul in care cartea este disponibila<br>
+					 3) Sistemul marcheaza cartea ca imprumutata<br>
+					 Preconditii: Consultare Carti<br>
+
+					 Nume: Consultare carti<br>
+					 Actor: Bibliotecarul<br>
+					 Flux: 	1) Bibliotecarul derileaza lista de carti<br>
+					 Scenariu de Exceptie: -<br>
+					 Preconditii: Autentificare<br>
+
+					 Nume: Returneaza Carte<br>
+					 Actor: Bibliotecar<br>
+					 Flux: 	1) Utlizatorul alege cartea<br>
+					 2) Utilizatorul introduce numele abonatului care a imprumutat cartea<br>
+					 3) Utilizatorul apasa butonul de returnare<br>
+					 4 a) Sistemul marcheaza cartea ca returnata in cazul in care utilizatorul a imprumutat cartea<br>
+					 4 b) In caz contrar sistemul semnaleaza eroarea<br>
+					 Preconditii: Consultare Carti<br>
+
+					 Nume: Adauga Carte<br>
+					 Actor: Bibliotecar<br>
+					 Flux:1) Utilizatorul introduce datele<br>
+					 3) Utilizatorul apasa butonul de adaugare<br>
+					 4 a) Sistemul introduce datele in cazul in care datele sunt valide<br>
+					 4 b) In caz contrar sistemul semnaleaza eroarea<br>
+					 Preconditii: Consultare Carti<br>
+
+
+					 Nume: Modifica Carte<br>
+					 Actor: Bibliotecar<br>
+					 Flux: 	1) Utlizatorul alege cartea<br>
+					 2) Utilizatorul introduce datele noi<br>
+					 3) Utilizatorul apasa butonul de modificare<br>
+					 4 a) Sistemul modifica datele in cazul in care datele sunt valide<br>
+					 4 b) In caz contrar sistemul semnaleaza eroarea<br>
+					 Preconditii: Consultare Carti<br>
+
+
+					 Nume: Sterge Carte<br>
+					 Actor: Bibliotecar<br>
+					 Flux: 	1) Utlizatorul alege cartea<br>
+					 2) Utilizatorul apasa butonul de stergere<br>
+					 3) Sistemul sterge cartea<br>
+					 Preconditii: Consultare Carti<br>
+
+
+<h3>Diagrama de Clase extinsa</h3>
+<img src="Main.png" width="100%">
+
+<h3>Diagrame de secventa</h3>
+<img src="Untitled Diagram.png" width="100%">
+<img src="updata.png" width="100%">
+
+
+
+<h3>Tehnologii Utiliate</h3>
+<ul>
+	<li>Limbajul de progrmare GO (golang) pentru tot ce tine de backend</li>
+	<li>Gorutine (CSP) pentru concurenta, gestiunea simultana a mai multor clienti</li>
+	<li>Pachetul standard http din go</li>
+	<li>Routerul MUX pentru rutarea traficului spre HTTPServe functions</li>
+	<li>PotgreSQL baza de date relationala</li>
+	<li>xorm orm pentru GO</li>
+	<li>JWT pentru qutentificare si autorizare</li>
+	<li>HMAC cu secret comun pentru semnatura digitala</li>
+	<li>SSE pentru comunicarea de la server la client, implementare cu corutine si canale</li>
+	<li>Vanilla JS pt frontend</li>
+	<li>Web Components</li>
+	<li>Extensii reactive de javascript pt Observer</li>
+	<li>CSS grid pt layout</li>
+	<li>CSS media query</li>
+	<li>Vim</li>
+	<li>Postman</li>
+</ul>
+
+
+
+</body>
+</html>

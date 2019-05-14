@@ -1,0 +1,29 @@
+:root {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: 1.5em 'Indie Flower', cursive, sans-serif;
+	background-color: #ddd;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	--bg-color: #eee;
+	--fg-color: #161616;
+	--primary-color: #4abdac;
+	--primary-color-light: #8fd6cc;
+	--accent-color: #fc4a1a;
+	--accent-color-light: red;
+	--secondary-color: #f78733;
+	--secondary-color-light: blue;
+	--font: 15px arial, sans-serif;
+	background-color: var(--bg-color);
+	color: var(--fg-color);
+}
+
+.cards {
+	padding: 1em;
+	padding-top: 3.5em;
+}

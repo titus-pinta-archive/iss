@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Library</title>
+		<script src="https://cdn.jsdelivr.net/rxjs/4.1.0/rx.min.js"></script>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body>
+
+
+		<app-navbar id="navbar"></app-navbar>
+		<div class="cards"><app-cards id="user-cards"></app-cards></div>
+
+
+
+		<app-modal id="log-in-modal">
+			<div id="log-in-container">
+				<app-form id="login-form"></app-form>
+			</div>
+		</app-modal>
+		<app-modal id="succes-modal"><div>Succes!</div></app-modal>
+		<app-modal id="error-modal"><div>Erroe!</div></app-modal>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
+		<script src="/controller/main.js"></script>
+
+
+
+		<link rel="import" href="/components/navbar/layout.html">
+		<link rel="import" href="/components/card/layout.html">
+		<link rel="import" href="/components/cards/layout.html">
+		<link rel="import" href="/components/modal/layout.html">
+		<link rel="import" href="/components/field/layout.html">
+		<link rel="import" href="/components/form/layout.html">
+	</body>
+</html>

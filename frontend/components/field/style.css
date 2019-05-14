@@ -1,0 +1,36 @@
+.app-field__container {
+	display: flex;
+	flex-direction: column;
+	flex-direction: column-reverse;
+	align-content: center;
+	justify-content: space-around;
+	width: 100%;
+	padding: 1em 0 0.2em;
+}
+
+.app-field__container > label {
+	font-size: 0.9em;
+	padding: 0px;
+	display: block;
+	width: 100%;
+	transition: all 0.3s ease-in;
+}
+
+.app-field__container > input {
+	width: 100%;
+	border: none;
+	padding: 0.5em 0.5em 0.5em;
+	border-bottom: 2px solid #aaa; 
+	transition: all 0.3s ease-in;
+	font-size: 0.9em;
+	box-sizing: border-box;
+}
+
+.app-field__container > input:focus {
+	border-bottom: 2px solid var(--primary-color); 
+}
+
+.app-field__container > input:focus + label {
+	color: var(--primary-color);
+}
+

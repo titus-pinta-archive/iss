@@ -1,0 +1,75 @@
+.app-modal__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition: all 0.2s ease-in;
+}
+
+.app-modal__container.app-modal__hidden {
+	width: 0;
+	height: 0;
+}
+
+.app-modal__container.app-modal__hidden > * {
+	display: none;
+}
+
+.app-modal__content {
+	padding: 1em;
+	position: relative;
+	background-color: var(--bg-color);
+	color: var(--accent-color);
+	box-shadow: 0 0.3em 0.5em 0 rgba(0,0,0,0.4);
+	min-width: 450px;
+	max-width: 450px;
+	width: 100%;
+}
+
+.app-modal__close {
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	top: 0.5em;
+	right: 0.3em;
+	cursor: pointer;
+}
+
+.app-modal__close:hover {
+	color: var(--accent-color-light);
+}
+
+/*Close Icon*/
+.close.icon {
+	position: absolute;
+	margin-top: 0;
+	margin-left: 0;
+	width: 1.6em;
+	height: 1.6em;
+}
+
+.close.icon:before {
+	content: '';
+	position: absolute;
+	top: 0.6em;
+	width: 1em;
+	height: 2px;
+	background-color: currentColor;
+	transform: rotate(-45deg);
+}
+
+.close.icon:after {
+	content: '';
+	position: absolute;
+	top: 0.6em;
+	width: 1em;
+	height: 2px;
+	background-color: currentColor;
+	transform: rotate(45deg);
+}
+

@@ -1,0 +1,48 @@
+.app-card__card {
+	display: block;	
+	height: 100%;
+	box-shadow: 0 0.2em 0.3em 0 rgba(0,0,0,0.4);
+	transition: 0.3s;
+}
+
+.app-card__card > img {
+	width: 100%;
+}
+
+.app-card__card:hover {
+	box-shadow: 0 0.3em 0.5em 0 rgba(0,0,0,0.4);
+}
+
+.app-card__container {
+	padding: 0.2em 0.5em;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.app-card__container > p {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+.app-card__actions {
+	display: flex;
+	justify-content: space-between;
+	color: var(--primary-color);
+	box-shadow: 0 -1px var(--primary-color);
+}
+
+.app-card__actions > a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.app-card__actions > a:hover {
+	color: var(--primary-color-light);
+}
+
+.app-card__actions {
+	padding: 0.2em;
+}

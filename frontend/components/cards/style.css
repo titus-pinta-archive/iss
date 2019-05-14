@@ -1,0 +1,31 @@
+.app-cards__container {
+	
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.app-cards__add {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 2em;
+}
+
+.app-cards__add > div {
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 2em;
+	height: 2em;
+	border-radius: 100%;
+	color: var(--accent-color);
+	cursor: pointer;
+	box-shadow: 0 0.2em 0.3em 0 rgba(0,0,0,0.4);
+}
+
+.app-cards__add > div:hover {
+	background-color: var(--primary-color-light);
+	box-shadow: 0 0.3em 0.5em 0 rgba(0,0,0,0.4);
+}
